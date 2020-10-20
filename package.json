@@ -15,7 +15,6 @@
   "scripts": {
     "test": "NODE_ENV=ci jest --testEnvironment=node --forceExit --detectOpenHandles",
     "start": "node index.js",
-    "ci": "NODE_ENV=ci PORT=3000 node index.js",
     "server": "NODE_ENV=development nodemon index.js --ignore tests",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

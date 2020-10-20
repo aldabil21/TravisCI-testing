@@ -2,11 +2,11 @@ language: node_js
 node_js:
   - "12"
 dist: trusty
-addons:
-  chrome: stable
-  apt:
-    packages:
-      - libnss3
+# addons:
+#   chrome: stable
+#   apt:
+#     packages:
+#       - libnss3
 services:
   - xvfb
   - mongodb
@@ -24,6 +24,6 @@ install:
   - npm install
   - npm run build
 script:
-  - nohup npm run ci &
+  - nohup npm run start &
   - sleep 3
   - npm run test
